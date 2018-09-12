@@ -1,0 +1,235 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
+
+\documentclass[12pt]{article}
+
+\usepackage{apuntes-estilo}
+\usepackage{fancyhdr,lastpage}
+\usepackage{graphicx}
+
+\def\maketitle{
+
+    \makeatletter
+    {\color{bl} \centering \huge \sc \textbf{
+    Trabajo práctico N° 5\\
+    \large \vspace*{-8pt} \color{black} Aspectos legales de las producciones
+    Multimedia
+    \vspace*{8pt} }\par}
+    \makeatother
+
+    \makeatletter
+    \input{tex/banner.tex}
+}
+
+% Custom headers and footers
+\fancyhf{} % clear all header and footer fields
+\fancypagestyle{plain}{\fancyhf{}}
+\pagestyle{fancy}
+\lhead{\footnotesize TP N° 5 - Aspectos legales de las producciones
+Multimedia}
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+
+\def\ti#1#2{\texttt{#1} & #2 \\ }
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle
+\setlength{\parindent}{0pt}
+
+\section*{Introducción}
+
+Las composiciones multimedia, traen aparejado la necesidad de evaluar ciertos
+aspectos legales que pueden afectar a la organización que la produce (o
+individuo). Por ejemplo, una presentación como las que podemos realizar con
+\emph{LibreOffice Impress}, podría traer aparejado un conflicto legal para la
+organización si su contenido digital no esta correctamente verificado.
+
+En grandes organizaciones, existen departamentos especializados en lo
+referente a aspectos legales, que establecen las políticas a seguir cuando los
+empleados pretenden crear contenidos multimedia en nombre de la misma. De ese
+modo, los usuarios deberán respetar tal o cual licencia sobre su producción,
+podrán o no utilizar el logo de la empresa, etc. Un empleado podría
+preguntarse por ejemplo, si puede utilizar un video en su presentación, que
+acaba de descargar de la web.
+
+En organizaciones más pequeñas, muchas veces este departamento especializado
+no existe, y las producciones multimedia de los usuarios se crean sin ningún
+tipo de asesoramiento legal. En estos casos, muchas veces recae en el
+administrador o gerente de sistemas, alertar a los usuarios sobre las
+conductas que pueden generar un conflicto legal a la hora de crear
+producciones multimedia. Porque después de todo, fueron los administradores
+los que instalaron el software que terminó dando origen a la producción
+(aunque lamentable, muchas veces esta es la asociación que padecen los
+administradores).
+
+Por un lado está la legalidad del software utilizado para la composición
+multimedia. Este aspecto legal ha sido cubierto en otras materias, y atañe
+tanto a administradores como a usuarios. En líneas generales, debemos respetar
+cada licencia de cada software utilizado para la composición multimedia (desde
+los editores, reproductores, software de autoría etc).
+
+Pero más complejo aún es lo referente a los derechos de autor sobre la
+composición multimedia en sí misma, y cada elemento individual que la compone:
+texto, imagen, video, etc.
+
+\section*{Descripción}
+
+
+La intención de este cuestionario es abrir el debate para alertarnos acerca de
+la complejidad de este problema y vislumbrar ideas acerca de cómo prevenir
+conflictos legales derivados de las producciones multimedia. Con este fin,
+analizaremos el documental producido por TVE (Televisión Española), llamado
+Copiad Malditos:
+\emph{http://copiadmalditos.blogspot.com.ar/p/videos-el-documental.html}
+
+\begin{itemize}
+
+    \item ¿Qué es el derecho de autor?
+      
+    \item ¿Qué es el copyright?
+      
+    \item ¿Qué es el \emph{copyleft}?
+      
+    \item ¿Cuál es el organismo nacional equivalente a SGAE de España?
+      
+    \item ¿Qué es \emph{creative commons}?
+      
+    \item ¿Qué implican las licencias \emph{creative commons}?
+      
+    \item ¿Hay otras licencias de tipo \emph{copyleft} para producciones
+        multimedia?
+      
+    \item ¿Qué cree que sucede con los derechos de auto dentro de las grandes
+        corporaciones y empresas privadas?
+      
+    \item En el caso de la producción multimedia del documental de TVE,
+        ¿Importa sólo el derecho de autor de quien hace la composición en su
+        conjunto o se ven involucrados los derechos de los productores de cada
+        elemento individual?
+      
+    \item Piense en sus propias producciones multimedia, por ejemplo todos los
+        documentos creados para esta materia y subidos a la PedCO. ¿Tiene Ud.
+        derecho sobre cada imagen, texto, video, etc; utilizado en su
+        producción? ¿Pensó que podría producir un conflicto a la Universidad
+        por utilizar elementos sobre los cuales no tiene derechos? Observe que
+        la PedCO esta disponible al público en general a través de Internet,
+        bajo un dominio controlado por la Universidad.
+
+\end{itemize}
+
+%%%%%%%%%%%
+La organización del trabajo recomendada es la siguiente:
+
+\scalebox{0.39}{
+
+\centering
+
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\titlepage
+
+\begin{center}
+\ \\
+\ \\
+\vspace{-1cm}
+
+
+\ \\
+
+\vspace{0.5cm}
+{\Large{\bf \sc Aplicaciones Libres}}\\
+
+\ \\
+{\Large { \sc Facultad de Informática}}\\
+
+\ \\
+{\Large{\bf \sc Universidad Nacional del Comahue}}\\
+
+
+\vspace{-2.5cm}
+\mbox{\hspace{-1cm}\includegraphics[width=2.5cm,height=2.5cm]{logos/uncoma.pdf}\hspace{13cm}
+    \includegraphics[width=2.5cm,height=2.5cm]{logos/fai.pdf}}
+
+
+\vspace{6cm}
+
+{\Large {\bf\sc Trabajo Practico: Aplicaciones multimedia}}\\
+\ \\
+\ \\
+\vspace{3cm}
+
+{\Large Nombre, Apellido Autor1}\\
+{\Large Nombre, Apellido Autor2}\\
+{\Large Nombre, Apellido Autor3}\\
+
+\vfill
+{\Large fecha}\\
+
+\end{center}
+
+\end{minipage}
+}
+~
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\section*{Indice:}
+
+\begin{itemize}
+    \item Título 1......... Nº de pag.
+        \begin{itemize}
+            \item Sección 1....... Nº de pag.
+            \item Sección 2....... Nº de pag.
+        \end{itemize}
+    \item Título 2......... Nº de pag.
+    \begin{itemize}
+        \item Sección 1....... Nº de pag.
+        \item Sección 2....... Nº de pag.
+    \end{itemize}
+\end{itemize}
+
+\section*{Lista de gráficos:}
+
+\begin{itemize}
+
+    \item Título de figura o esquema 1..... Nº de pag.
+
+    \item Título de figura o esquema 2..... Nº de pag.
+
+\end{itemize}
+
+\section*{Introducción}
+
+Introducción al problema, importancia y objetivos.
+
+\section*{Desarrollo:}
+\begin{itemize}
+
+    \item Toda información de importancia.
+
+    \item Detallar explicar con vocabulario acorde. 
+
+    \item Citar textos, poner opiniones de personas. Tiene que ser claro y
+        preciso, también van a ir las imágenes y/o esquemas.
+
+\end{itemize}
+
+\section*{Conclusión:}
+
+Retomar y analizar lo que se dijo previamente en el desarrollo y demostrar que
+se cumplió con el objetivo y/o una conclusión final 
+
+\section*{Bibliografía:}
+
+Material bibliográfico detallado, si es un libro editorial, nombre del libro,
+autor,etc. Si es pagina de Internet poner el link y fecha de consulta.
+
+\end{minipage}
+}
+}
+
+\end{document}

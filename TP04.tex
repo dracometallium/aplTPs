@@ -1,0 +1,320 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
+
+\documentclass[12pt]{article}
+
+\usepackage{apuntes-estilo}
+\usepackage{fancyhdr,lastpage}
+\usepackage{graphicx}
+
+\def\maketitle{
+
+    \makeatletter
+    {\color{bl} \centering \huge \sc \textbf{
+    Trabajo práctico N° 4\\
+    \large \vspace*{-8pt} \color{black} Aplicaciones Multimedia
+    \vspace*{8pt} }\par}
+    \makeatother
+
+    \makeatletter
+    \input{tex/banner.tex}
+
+}
+
+% Custom headers and footers
+\fancyhf{} % clear all header and footer fields
+\fancypagestyle{plain}{\fancyhf{}}
+\pagestyle{fancy}
+\lhead{\footnotesize TP N° 4 - Aplicaciones Libres}
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+
+\def\ti#1#2{\texttt{#1} & #2 \\ }
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle
+\setlength{\parindent}{0pt}
+
+\section*{Introducción}
+
+
+El mundo de las aplicaciones multimedia es inmenso. Como administradores de
+sistemas encontraremos cientos de requisitos diferentes sobre imagen, audio,
+video y autoría multimedia.
+
+Este trabajo tendrá varios objetivos con respecto a multimedia:
+
+\begin{itemize}
+
+\item Conocer terminología básica respecto a cada componente multimedia.
+
+    \item Conocer la problemática básica de las aplicaciones. Cómo se agrupan,
+    cuáles son las funcionalidades principales.
+
+    \item Visualizar los recursos necesarios a nivel de hardware y software.
+
+    \item Vincular aplicaciones con los formatos de archivos manipulados.
+
+    \item Vincular aplicaciones de software libre con aplicaciones utilizadas
+    como estándar de facto, posiblemente privativas.
+
+\end{itemize}
+
+\section{Descripción}
+
+Es habitual que comunidades de personas con fines comunes aúnen esfuerzo para
+resolver ciertos tipo de problemas, el mundo del software, y en particular el
+mundo de los sistemas operativos GNU/Linux no es ajeno a este fenómeno. En
+este caso, y con los objetivos mencionados anteriormente, analizaremos el
+trabajo de comunidades de usuarios y desarrolladores de aplicaciones
+multimedia, que han dado como resultado nuevas distribuciones GNU/Linux.
+
+Nuestro objetivo no será promover el uso de las distribuciones en si, sino el
+análisis de las mismas como medio de obtener conocimiento acerca de
+aplicaciones multimedia instaladas en ellas y la organización de las mismas
+(forma en que están agrupadas y presentadas a los usuarios). El administrador
+podrá considerar en el futuro este tipo de soluciones cuando se adapte a los
+requisitos de los usuarios.
+
+A cada grupo se le asignara una distribución sobre la que deberán realizar un
+informe cubriendo todos los puntos que se plantean más adelante. Se debe
+respetar el mismo formato que en los trabajos anteriores. Soló uno de los
+integrantes debe subir el informe completo, el resto debe subir únicamente la
+caratula.
+
+Las distribuciones a considerar serán:
+
+\begin{itemize}
+
+    \item Ubuntu Studio: http://ubuntustudio.org/
+
+    \item DreamStudio: (formerly Dream Studio) http://dreamstudio.com/
+
+    \item OpenArtist: http://openartisthq.org/
+
+    \item Musix GNU+Linux: https://musixdistro.wordpress.com/
+
+    \item AV Linux: http://www.bandshed.net/avlinux/
+
+\end{itemize}
+
+\subsubsection{Características básicas de la distribución}
+
+La siguiente información deberá ser recolectada para la distribución asignada:
+
+\begin{enumerate}
+
+    \item País de origen.
+
+    \item Logo que la representa.
+
+    \item ¿Deriva de alguna otra distribución?
+
+    \item ¿Se encuentra activo su desarrollo? ¿De cuándo es la fecha de su
+    última versión estable?
+
+    \item ¿Qué entorno gráfico utiliza?
+
+    \item ¿Cuál es su página web oficial?
+
+    \item ¿Para qué arquitectura de hardware se encuentra disponible?
+
+    \item ¿Proveen software privativo como parte de la instalación?
+
+    \item ¿Cómo están organizadas las aplicaciones? ¿Es sencillo encontrar
+    aplicaciones multimedia para cada fin? Por ejemplo, si queremos un editor
+    de sonido.
+
+\end{enumerate}
+
+\subsubsection*{Aplicaciones multimedia}
+
+Recorra la distribución y elija aplicaciones multimedia que satisfagan las
+siguientes características:
+
+\begin{itemize}
+
+    \item 4 aplicaciones relacionadas a imágenes estáticas bidimensionales.
+
+    \item 4 aplicaciones relacionadas a sonido
+
+    \item 4 aplicaciones relacionadas a video y animación.
+
+    \item 2 aplicaciones relacionadas a autoría multimedia.
+
+\end{itemize}
+
+Las aplicaciones elegidas no deben ser obsoletas, es decir deben tener una
+comunidad activa y desarrollo no superior a tres años, es decir la última
+versión disponible por el desarrollador no debe superar los tres años.
+
+Para cada aplicación deberá:
+
+\begin{enumerate}
+
+    \item Describir brevemente su funcionalidad.
+
+    \item Características técnicas: Requisitos generales de sistema:
+    almacenamiento masivo, RAM, CPU, hardware específico, etc. Versión.
+    Licencia. Sitio del desarrollo (\emph{homepage/mainstream}).
+
+    \item Formatos de datos manipulados:
+
+    \begin{itemize}
+
+        \item Indique qué formatos manipula la aplicación.
+
+        \item Indique si los formatos son nativos de la aplicación.
+
+        \item De ser posible indique si los formatos aplican compresión o no.
+
+        \item En el caso de formatos de imágenes 2D estáticas, indique si son
+            vectoriales o matriciales (mapa de bits).
+
+
+    \end{itemize}
+
+    \item Dar dos ejemplos de uso de la aplicación. ¿Para qué podría servir?
+
+    \item ¿Existe alguna aplicación que sea un estándar de facto y cubra esta
+    funcionalidad? Por ejemplo el estándar de facto para dibujo CAD suele ser
+    \emph{Autocad (R) de Autodesk}, si bien existe \emph{FreeCad}, \emph{Qcad}
+    y otros que tienen funcionalidades similares.
+
+    \item En el caso de aplicaciones de autoría: ¿Permiten agregar
+    interactividad a la composición? ¿Son lineales o no lineales? ¿Cómo podría
+    un usuario hacer uso de la composición resultante?
+
+\end{enumerate}
+
+\subsection*{Preguntas generales}
+
+\begin{itemize}
+
+    \item ¿Cuál es el modelo de la placa de video? ¿Cómo obtiene esta
+    información?
+
+    \item ¿Cuál es el modelo de la placa de sonido? ¿Cómo obtiene esta
+    información?
+
+    \item ¿Cuál es el driver utilizado para la tarjeta de video?
+
+    \item ¿Cuál es el driver utilizado para la tarjeta de sonido?
+
+\end{itemize}
+
+La organización del trabajo recomendada es la siguiente:
+
+\scalebox{0.39}{
+
+\centering
+
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\titlepage
+
+\begin{center}
+\ \\
+\ \\
+\vspace{-1cm}
+
+
+\ \\
+
+\vspace{0.5cm}
+{\Large{\bf \sc Aplicaciones Libres}}\\
+
+\ \\
+{\Large { \sc Facultad de Informática}}\\
+
+\ \\
+{\Large{\bf \sc Universidad Nacional del Comahue}}\\
+
+
+\vspace{-2.5cm}
+\mbox{\hspace{-1cm}\includegraphics[width=2.5cm,height=2.5cm]{logos/uncoma.pdf}\hspace{13cm}
+    \includegraphics[width=2.5cm,height=2.5cm]{logos/fai.pdf}}
+
+
+\vspace{6cm}
+
+{\Large {\bf\sc Trabajo Practico: Aplicaciones multimedia}}\\
+\ \\
+\ \\
+\vspace{3cm}
+
+{\Large Nombre, Apellido Autor1}\\
+{\Large Nombre, Apellido Autor2}\\
+{\Large Nombre, Apellido Autor3}\\
+
+\vfill
+{\Large fecha}\\
+
+\end{center}
+
+\end{minipage}
+}
+~
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\section*{Indice:}
+
+\begin{itemize}
+    \item Título 1......... Nº de pag.
+        \begin{itemize}
+            \item Sección 1....... Nº de pag.
+            \item Sección 2....... Nº de pag.
+        \end{itemize}
+    \item Título 2......... Nº de pag.
+    \begin{itemize}
+        \item Sección 1....... Nº de pag.
+        \item Sección 2....... Nº de pag.
+    \end{itemize}
+\end{itemize}
+
+\section*{Lista de gráficos:}
+
+\begin{itemize}
+
+    \item Título de figura o esquema 1..... Nº de pag.
+
+    \item Título de figura o esquema 2..... Nº de pag.
+
+\end{itemize}
+
+\section*{Introducción}
+
+Introducción al problema, importancia y objetivos.
+
+\section*{Desarrollo:}
+\begin{itemize}
+
+    \item Toda información de importancia.
+
+    \item Detallar explicar con vocabulario acorde. 
+
+    \item Citar textos, poner opiniones de personas. Tiene que ser claro y
+        preciso, también van a ir las imágenes y/o esquemas.
+
+\end{itemize}
+
+\section*{Conclusión:}
+
+Retomar y analizar lo que se dijo previamente en el desarrollo y demostrar que
+se cumplió con el objetivo y/o una conclusión final 
+
+\section*{Bibliografía:}
+
+Material bibliográfico detallado, si es un libro editorial, nombre del libro,
+autor,etc. Si es pagina de Internet poner el link y fecha de consulta.
+
+\end{minipage}
+}
+}
+
+\end{document}

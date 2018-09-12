@@ -1,52 +1,36 @@
 %%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
 %%%
 %%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
 
 \documentclass[12pt]{article}
-
 
 \usepackage{apuntes-estilo}
 \usepackage{fancyhdr,lastpage}
 \usepackage{graphicx}
 
-
-
 \def\maketitle{
 
-% Titulo 
- \makeatletter
- {\color{bl} \centering \huge \sc \textbf{
+\makeatletter
+{\color{bl} \centering \huge \sc \textbf{
 Trabajo práctico N° 3\\
 \large \vspace*{-8pt} \color{black} Ofimática
- \vspace*{8pt} }\par}
- \makeatother
+\vspace*{8pt} }\par}
+\makeatother
 
-
-% Autor
- \makeatletter
- {\centering \small 
-	Aplicaciones Libres\\
- 	Departamento de Ingeniería de Computadoras \\
- 	Facultad de Informática - Universidad Nacional del Comahue \\
- 	\vspace{20pt} }
- \makeatother
-
-\vspace{-2.5cm}
-\mbox{\hspace{-1cm}\includegraphics[width=3cm,height=3cm]{logos/uncoma.pdf}\hspace{12cm}
-    \includegraphics[width=3cm,height=3cm]{logos/fai.pdf}}
+\makeatletter
+\input{tex/banner.tex}
 
 }
 
 % Custom headers and footers
 \fancyhf{} % clear all header and footer fields
 \fancypagestyle{plain}{\fancyhf{}}
-  	\pagestyle{fancy}
- 	\lhead{\footnotesize TP N 2 - Aplicaciones Libres}
- 	\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+\pagestyle{fancy}
+\lhead{\footnotesize TP N 3 - Ofimática}
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
 
 \def\ti#1#2{\texttt{#1} & #2 \\ }
-
-
 
 \begin{document}
 
@@ -174,9 +158,10 @@ los recursos que considere necesarios, como ejemplos, imágenes, etc.
     \item{Usuario 2}: necesita agregar en su documento un hipervinculo a una
     página .
 
-    \item{Usuario 3}: en su equipo tiene instalado MS Office y ahora dado que
-    se planea la migración a alguna de las aplicaciones libres y ha comenzado
-    a utilizarla consulta sobre los atajos, si son los mismos o son diferentes.
+    \item{Usuario 3}: en su equipo tiene instalado \emph{MS Office} y ahora
+    dado que se planea la migración a alguna de las aplicaciones libres y ha
+    comenzado a utilizarla consulta sobre los atajos, si son los mismos o son
+    diferentes.
 
     \item{Usuario 4}: necesita crear un conjunto de cartas que tienen la misma
     información, lo único que se modifica es a quién va dirigido. La
@@ -206,9 +191,9 @@ los recursos que considere necesarios, como ejemplos, imágenes, etc.
     con viñetas utilizando como símbolo un rombo. Además quiere conocer como
     quitar el formato de lista con viñetas.
 
-    \item{Usuario 10}: era un usuario de MS Office y ahora que esta utilizando
-    el procesador de texto libre, no encuentra las fuentes que habitualmente
-    usa, tales como Time New Roman y Arial.
+    \item{Usuario 10}: era un usuario de \emph{MS Office} y ahora que esta
+    utilizando el procesador de texto libre, no encuentra las fuentes que
+    habitualmente usa, tales como \emph{Time New Roman} y \emph{Arial}.
 
 \end{description}
 
@@ -235,7 +220,7 @@ los recursos que considere necesarios, como ejemplos, imágenes, etc.
     referenciadas en la fórmula.
 
     \item{Usuario 4}: necesita agregar una columna entre medio de dos columnas
-    que poseen datos.  También debe agregar una fila entre medio de otras con
+    que poseen datos. También debe agregar una fila entre medio de otras con
     información.
 
     \item{Usuario 5}: necesita establecer un formato específico para una celda
@@ -261,7 +246,7 @@ los recursos que considere necesarios, como ejemplos, imágenes, etc.
     \item{Usuario 9}: tiene una hoja de cálculo en las que hay ciertos datos
     críticos que no deben ser modificados, para lo cual necesita protegerla.
 
-    \item{Usuario 10}: era un usuario de MS Office y ahora que esta utilizando
+    \item{Usuario 10}: era un usuario de \emph{MS Office} y ahora que esta utilizando
     una aplicación libre de planillas de cálculo, no puede cambiar el tipo de
     referencia (absoluta, relativa o mixta) presionando la tecla F4.
 
@@ -304,9 +289,9 @@ los recursos que considere necesarios, como ejemplos, imágenes, etc.
     entiende como hacerlas y actualizarlas cuando la fuente de información se
     modifica.
 
-    \item{Usuario 10}: era un usuario de MS Office y ahora que esta utilizando
+    \item{Usuario 10}: era un usuario de \emph{MS Office} y ahora que esta utilizando
     una aplicación libre de planillas de cálculo, no encuentra las fuentes que
-    habitualmente usa, tales como Time New Roman y Arial.
+    habitualmente usa, tales como \emph{Time New Roman} y \emph{Arial}.
 
 \end{description}
 
@@ -393,7 +378,7 @@ La organización del trabajo recomendada es la siguiente:
 
 \vspace{6cm}
 
-{\Large {\bf\sc Trabajo Practico: Formato interno de archivo}}\\
+{\Large {\bf\sc Trabajo Practico: Ofimática}}\\
 \ \\
 \ \\
 \vspace{3cm}

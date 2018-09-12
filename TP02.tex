@@ -1,52 +1,36 @@
 %%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
 %%%
 %%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
 
 \documentclass[12pt]{article}
-
 
 \usepackage{apuntes-estilo}
 \usepackage{fancyhdr,lastpage}
 \usepackage{graphicx}
 
-
-
 \def\maketitle{
 
-% Titulo 
- \makeatletter
- {\color{bl} \centering \huge \sc \textbf{
+\makeatletter
+{\color{bl} \centering \huge \sc \textbf{
 Trabajo práctico N° 2\\
 \large \vspace*{-8pt} \color{black} Formato interno de archivos
- \vspace*{8pt} }\par}
- \makeatother
+\vspace*{8pt} }\par}
+\makeatother
 
-
-% Autor
- \makeatletter
- {\centering \small 
-	Aplicaciones Libres\\
- 	Departamento de Ingeniería de Computadoras \\
- 	Facultad de Informática - Universidad Nacional del Comahue \\
- 	\vspace{20pt} }
- \makeatother
-
-\vspace{-2.5cm}
-\mbox{\hspace{-1cm}\includegraphics[width=3cm,height=3cm]{logos/uncoma.pdf}\hspace{12cm}
-    \includegraphics[width=3cm,height=3cm]{logos/fai.pdf}}
+\makeatletter
+\input{tex/banner.tex}
 
 }
 
 % Custom headers and footers
 \fancyhf{} % clear all header and footer fields
 \fancypagestyle{plain}{\fancyhf{}}
-  	\pagestyle{fancy}
- 	\lhead{\footnotesize TP N 2 - Aplicaciones Libres}
- 	\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+\pagestyle{fancy}
+\lhead{\footnotesize TP N° 2 - Formato interno de archivos}
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
 
 \def\ti#1#2{\texttt{#1} & #2 \\ }
-
-
 
 \begin{document}
 
@@ -56,19 +40,32 @@ Trabajo práctico N° 2\\
 
 \section*{Formato interno}
 
-Elabore una comparativa entre los formatos de archivos propuestos por la 
+Elabore una comparativa entre los formatos de archivos propuestos por la
 cátedra. La misma deberá incluir, {\it como mínimo}, la siguiente información:
+
 \begin{itemize} 
-\item Breve historia
-\item Funcionalidad
-\item Formato abierto o cerrado (no publicado).
-\item Información sobre licenciamiento/patentes.
-\item Aplicaciones que lo manipulan. 
-\item Factibilidad de desarrollar un software que lo interprete. 
-\item Popularidad. Utilización dentro del país por parte de instituciones pública.  
-\item Indique si dichos formatos son reconocidos por el comando file y en 
-ese caso cómo es qué los reconoce.   
-\item ¿Podría sugerir una comparativa mejor en cuanto a la funcionalidad que proveen estos formatos?
+
+    \item Breve historia
+
+    \item Funcionalidad
+
+    \item Formato abierto o cerrado (no publicado).
+
+    \item Información sobre licenciamiento/patentes.
+
+    \item Aplicaciones que lo manipulan. 
+
+    \item Factibilidad de desarrollar un software que lo interprete. 
+
+    \item Popularidad. Utilización dentro del país por parte de instituciones
+    pública.  
+
+    \item Indique si dichos formatos son reconocidos por el comando file y en
+    ese caso cómo es qué los reconoce.   
+
+    \item ¿Podría sugerir una comparativa mejor en cuanto a la funcionalidad
+    que proveen estos formatos?
+
 \end{itemize} 
 
 Incluya las referencias que utilice para elaborar la comparativa. 

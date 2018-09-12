@@ -1,0 +1,209 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
+
+\documentclass[12pt]{article}
+
+\usepackage{apuntes-estilo}
+\usepackage{fancyhdr,lastpage}
+\usepackage{graphicx}
+
+\def\maketitle{
+
+    \makeatletter
+    {\color{bl} \centering \huge \sc \textbf{
+    Trabajo práctico N° 6\\ Interacción entre diferentes Sistemas Operativos
+    \large \vspace*{-8pt} \color{black} 
+    \vspace*{8pt} }\par}
+    \makeatother
+
+    \makeatletter
+    \input{tex/banner.tex}
+}
+
+% Custom headers and footers
+\fancyhf{} % clear all header and footer fields
+\fancypagestyle{plain}{\fancyhf{}}
+\pagestyle{fancy}
+\lhead{\footnotesize TP N° 6 - Interacción entre diferentes Sistemas Operativos }
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+
+\def\ti#1#2{\texttt{#1} & #2 \\ }
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle
+\setlength{\parindent}{0pt}
+
+\section*{Introducción}
+
+En una organización (aún cuando esta sea pequeña) podemos encontrarnos con
+diferentes ambientes de trabajo, hardware y software heterogéneos, lo cual
+supone varias dificultades.
+
+En relación al software, los programas son diseñados para ciertos sistemas
+operativos por lo cual no siempre funcionan en sistemas para los cuales no
+fueron diseñados. Por ejemplo, los programas \emph{Windows} no ejecutan
+correctamente en sistemas GNU/Linux ya que las llamadas al sistema y
+bibliotecas no son las mismas. Análogamente ocurre con las aplicaciones
+\emph{GNU/Linux}.
+
+Aunque existen muchas alternativas libres al software que usamos a diario en
+\emph{Windows}, y además muchas de las aplicaciones de uso común y más
+populares cuentan con versiones para múltiples plataformas, más de una vez el
+usuario se encuentra con que la mejor alternativa es la aplicación que solo
+puede instalar en \emph{Windows}. Este suele ser el caso de las aplicaciones
+gráficas, como por ejemplo \emph{Photoshop}.
+
+\section*{Desafíos}
+
+\begin{itemize}
+
+    \item ¿Cómo ejecutamos aplicaciones \emph{Windows} en sistemas
+        \emph{GNU/Linux}?
+
+    \item ¿Cómo ejecutamos aplicaciones \emph{GNU/Linux} en sistemas
+        \emph{Windows}?
+
+\end{itemize}
+
+\section*{Descripción}
+
+Tomando como base una distribución \emph{Linux} y una distribución
+\emph{Microsoft Windows}, se deberá elaborar un informe, según el esquema de la figura 1, sobre los siguientes puntos:
+
+\begin{enumerate}
+
+    \item Investigue, analice y compare,  las diferentes alternativas (libres
+        y pagas)  para correr Máquinas Virtuales de un Sistema Operativo en
+        otro diferente (\emph{Windows} en \emph{Linux y viceversa}).
+
+    \item Explique el uso de las aplicaciones \emph{Wine} y \emph{Cygwin} y
+        realice una comparación entre ambas.
+
+    \item Analice las diferentes alternativas de escritorios remotos y de las
+        herramientas/aplicaciones para logging remoto disponibles; teniendo en
+        cuenta su utilización desde un Sistema Operativo al otro.
+
+    \item Detalle en qué casos sugeriría cada una de las opciones anteriores.
+
+    \item Realice una conclusión teniendo en cuenta las ventajas y desventajas
+        de las opciones anteriores.
+
+\end{enumerate}
+
+%%%%%%%%%%%
+La organización del trabajo recomendada es la siguiente:
+
+\scalebox{0.39}{
+
+\centering
+
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\titlepage
+
+\begin{center}
+\ \\
+\ \\
+\vspace{-1cm}
+
+
+\ \\
+
+\vspace{0.5cm}
+{\Large{\bf \sc Aplicaciones Libres}}\\
+
+\ \\
+{\Large { \sc Facultad de Informática}}\\
+
+\ \\
+{\Large{\bf \sc Universidad Nacional del Comahue}}\\
+
+
+\vspace{-2.5cm}
+\mbox{\hspace{-1cm}\includegraphics[width=2.5cm,height=2.5cm]{logos/uncoma.pdf}\hspace{13cm}
+    \includegraphics[width=2.5cm,height=2.5cm]{logos/fai.pdf}}
+
+
+\vspace{6cm}
+
+{\Large {\bf\sc Trabajo Practico: Aplicaciones multimedia}}\\
+\ \\
+\ \\
+\vspace{3cm}
+
+{\Large Nombre, Apellido Autor1}\\
+{\Large Nombre, Apellido Autor2}\\
+{\Large Nombre, Apellido Autor3}\\
+
+\vfill
+{\Large fecha}\\
+
+\end{center}
+
+\end{minipage}
+}
+~
+\fbox{
+\begin{minipage}[c][\paperheight]{\paperwidth}
+
+\section*{Indice:}
+
+\begin{itemize}
+    \item Título 1......... Nº de pag.
+        \begin{itemize}
+            \item Sección 1....... Nº de pag.
+            \item Sección 2....... Nº de pag.
+        \end{itemize}
+    \item Título 2......... Nº de pag.
+    \begin{itemize}
+        \item Sección 1....... Nº de pag.
+        \item Sección 2....... Nº de pag.
+    \end{itemize}
+\end{itemize}
+
+\section*{Lista de gráficos:}
+
+\begin{itemize}
+
+    \item Título de figura o esquema 1..... Nº de pag.
+
+    \item Título de figura o esquema 2..... Nº de pag.
+
+\end{itemize}
+
+\section*{Introducción}
+
+Introducción al problema, importancia y objetivos.
+
+\section*{Desarrollo:}
+\begin{itemize}
+
+    \item Toda información de importancia.
+
+    \item Detallar explicar con vocabulario acorde. 
+
+    \item Citar textos, poner opiniones de personas. Tiene que ser claro y
+        preciso, también van a ir las imágenes y/o esquemas.
+
+\end{itemize}
+
+\section*{Conclusión:}
+
+Retomar y analizar lo que se dijo previamente en el desarrollo y demostrar que
+se cumplió con el objetivo y/o una conclusión final 
+
+\section*{Bibliografía:}
+
+Material bibliográfico detallado, si es un libro editorial, nombre del libro,
+autor,etc. Si es pagina de Internet poner el link y fecha de consulta.
+
+\end{minipage}
+}
+}
+
+\end{document}
