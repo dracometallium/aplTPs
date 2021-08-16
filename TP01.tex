@@ -6,6 +6,7 @@
 \documentclass[12pt]{article}
 \usepackage{apuntes-estilo}
 \usepackage{fancyhdr,lastpage}
+\usepackage{enumitem}
 
 \def\maketitle{
 
@@ -64,14 +65,14 @@ cuestiones de interoperabilidad.
         como {\tt archivo1}.
 
     \item ¿Qué formato interno indica el comando {\tt file} sobre
-        \emph{archivo1}? 
+        \emph{archivo1}?
 
-    \item ¿ Qué aplicaciones podría utilizar para visualizar el contenido de
+    \item ¿Qué aplicaciones podría utilizar para visualizar el contenido de
         \emph{archivo1}?
 
     \item Observe el contenido de \emph{archivo1} utilizando: ``{\tt od -c
-        archivo1}''. ¿Observa información adicional a la que vemos a través de
-        otras aplicaciones, como puede ser \emph{cat} o algún editor de texto?
+        archivo1}'' ¿Observa información adicional a la que vemos a través de
+        otras aplicaciones (por ejemplo \emph{cat} o algún editor de texto)?
         ¿Qué representa esa información?
 
     \item Observe el contenido de \emph{archivo1} utilizando: ``{\tt od -b
@@ -82,14 +83,14 @@ cuestiones de interoperabilidad.
 
 \end{enumerate}
 
-Ahora cabe preguntarse. ¿Cómo es que un byte almacenado con valor octal 141
+Ahora cabe preguntarse ¿Cómo es que un byte almacenado con valor octal 141
 (01100001), al ser visualizado por un editor se ve como el caracter ``a''?
 Esto sucede porque la aplicación que lo muestra hace una interpretación de
 esos bits utilizando un código. Observe la salida de ``{\tt file archivo1}''
 nuevamente y la referencia al sistema de codificación utilizado por el
 archivo. 
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 
     \item Observando el contenido numérico de cada byte nuevamente ({\tt od -b
     archivo1}), compare dichos valores con la tabla de caracteres ASCII
@@ -97,7 +98,7 @@ archivo.
     {\tt od -c archivo1}  para el mismo archivo.
 
     \item ¿Cómo se llaman y qué función cumplen el/los caracter/es de control
-    observados en la salidas anteriores? 
+    observados en la salidas anteriores?
 
 \end{enumerate}
 
@@ -119,7 +120,7 @@ línea.
 Vemos más de cerca esta ``insignificante'' discrepancia, y analicemos las
 implicaciones para los usuarios normales. 
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 
     \item Abra el \emph{archivo1} con el editor \emph{Vim} y, en modo normal,
     ejecute: {\tt :set ff?}. Este comando nos mostrará qué tipo de {\it fin de
@@ -144,13 +145,13 @@ implicaciones para los usuarios normales.
 
     \begin{itemize}
 
-        \item Consulte nuevamente el formato en uso: {\tt :set ff?}. ¿Cambió?
+        \item Consulte nuevamente el formato en uso: {\tt :set ff?} ¿Cambió?
 
         \item Vuelva a observar con {\tt od -c} el caracter de control de fin
         de línea de \emph{archivo1} y verifique lo mostrado por \emph{Vim}. 
 
         \item Vuelva a observar qué formato de archivo indica el comando {\tt
-        file} sobre \emph{archivo1}. ¿Cambió algo con respecto a la versión original? 
+        file} sobre \emph{archivo1} ¿Cambió algo con respecto a la versión original? 
 
         \item ¿Qué función cumple entonces el comando {\tt :bufdo!} utilizado
         al comienzo de este ejercicio?
@@ -161,15 +162,15 @@ implicaciones para los usuarios normales.
 
 Teniendo en cuenta todo lo visto hasta el momento, cabe ahora preguntarnos: 
 
-\begin{enumerate}
+\begin{enumerate}[resume]
 
     \item ¿Cómo afecta esta discrepancia a los usuarios normales? Imagine un
     usuario de un sistema GNU/Linux que manda un correo electrónico con un
     archivo de texto adjunto a un usuario de un sistema \emph{Microsoft
-    Windows} (C). ¿Qué sucederá cuando este último quiera abrir el archivo de
+    Windows} (C) ¿Qué sucederá cuando este último quiera abrir el archivo de
     texto, digamos con \emph{Notepad}?
 
-    \item Observe editores gráficos como \emph{gedit}. ¿Qué opciones relativas
+    \item Observe editores gráficos como \emph{gedit} ¿Qué opciones relativas
     a estas cuestiones de interoperabilidad poseen a la hora de guardar un
     archivo? ¿Cuál sería el equivalente en  \emph{gedit} a la sentencia {\tt
     :bufdo! set ff=dos|w } de \emph{Vim}? 
@@ -180,7 +181,7 @@ Este es el ejemplo más sencillo que podemos analizar acerca de cómo distintas
 aplicaciones y distintos sistemas operativos pueden hacer interpretaciones
 diferentes del formato interno de un archivo. Imagine ahora que en lugar de un
 archivo de texto, hablamos de un archivo con formato enriquecido como puede
-ser el generado por \emph{Microsoft Office}, o \emph{LibreOffice}. ¿Cuántas
+ser el generado por \emph{Microsoft Office}, o \emph{LibreOffice} ¿Cuántas
 discrepancias podrán surgir en la interpretación del formato? Parte de los
 objetivos de esta asignatura será vislumbrar esta clase de inconvenientes,
 cómo afecta esto a los usuarios y qué podemos hacer los administradores para
