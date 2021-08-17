@@ -1,0 +1,183 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+% vim: set spell spelllang=es syntax=tex :
+
+\documentclass[12pt]{article}
+\usepackage{apuntes-estilo}
+\usepackage{fancyhdr,lastpage}
+\usepackage{enumitem}
+
+\newcommand{\code}[1]{\textbf{\tt #1}}
+
+\def\maketitle{
+
+\makeatletter
+{\color{bl} \centering \huge \sc \textbf{ Trabajo práctico N° 0\\ \large
+\vspace*{-8pt} \color{black}Repaso de conceptos previos\vspace*{8pt} }\par}
+\makeatother
+
+\makeatletter
+\input{tex/banner.tex}
+}
+
+% Custom headers and footers
+\fancyhf{} % clear all header and footer fields
+\fancypagestyle{plain}{\fancyhf{}}
+\pagestyle{fancy}
+\lhead{\footnotesize TP N° 0 - Repaso de conceptos previos}
+\rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
+
+\def\ti#1#2{\texttt{#1} & #2 \\ }
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle
+\setlength{\parindent}{0pt}
+
+\section*{Sistemas de archivos, tipos y formatos de archivos}
+
+\begin{enumerate}
+
+    \item \begin{enumerate}
+
+        \item ¿Qué sistemas de archivos existen creados sobre memorias de
+            almacenamiento masivo en la máquina actual? Lístelos incluyendo
+            archivo de dispositivo, punto de montaje y sistema de archivos
+            utilizado. \label{listar_sitemas_montados}
+
+        \item   ¿Qué implica montar y desmontar un sistema de archivos? ¿Es
+            posible desmontar el sistema de archivos cuyo punto de montaje es
+            \code{/home}? ¿Cuál sería el riesgo de hacerlo? ¿Cuáles serial los
+            pasos a seguir para intentarlo?
+
+        \item ¿Para qué sirve el comando \code{tune2fs}? Utilizando dicho
+            comando, guarde a continuación la salida de la opción \code{-l}
+            para los sistemas de archivos listados en el punto
+            \ref{listar_sitemas_montados}. Responda:
+
+            \begin{enumerate}
+
+                \item   ¿Cuántos \emph{inodos} disponibles existen? ¿Cuántos
+                    de ellos están libres?
+
+                \item   ¿Cuál es el tamaño de cada \emph{inodo}? ¿Dónde se
+                    almacenan los mismos? ¿Qué conclusión puede sacar sobre
+                    esto?
+
+                \item   ¿Es el número de \emph{inodo} único en todo el
+                    sistema? Ejecute por ejemplo \code{find / -inum 16}
+
+            \end{enumerate}
+
+        \item   ¿Es posible configurar el número de \emph{inodos} disponibles
+            en un sistema de archivos al momento de crearlos? Observe el
+            manual del comando \code{mkfs.ext4} por ejemplo.
+
+        \item   ¿Para qué serviría? Piense en el tamaño promedio de los
+            archivos almacenados en un sistema de archivos en particular.
+
+        \end{enumerate}
+
+    \item \begin{enumerate}
+
+        \item   Utilice la opción \code{-type} del comando \code{find} para
+            ubicar todos los archivos de cada tipo posible (utilice la página
+            \code{man} de \code{find} para determinar los tipos posibles).
+            Responda:
+
+            \begin{enumerate}
+
+                \item   ¿Cuántos archivos de cada tipo hay en el sistema?
+                    Ordene por cantidad.
+
+                \item   ¿Observa algún patrón de ubicación de cada tipo de
+                    archivos?
+
+                \item   ¿Cuántos tipos de archivos posibles existen en
+                    GNU/Linux?
+
+            \end{enumerate}
+
+            \textbf{Ayuda1:} si lo prefiere, agregue la opción \code{-ls} para
+            observar las propiedades de los archivos.
+
+            \textbf{Ayuda2:} los mensajes de error puede ser obviados haciendo
+            la redirección \code{2\textgreater/dev/null} al final del comando
+            \code{find}.
+
+        \item Repita la búsqueda por tipo de archivos pero esta vez aplique el
+            comando file a cada archivo. Utilice la opción \code{-exec} de
+            \code{find} para este propósito. Responda:
+
+            \begin{enumerate}
+
+                \item   ¿Para qué sirve el comando file? Describa brevemente
+                    cómo funciona.
+
+                \item   ¿Sobre qué tipo de archivos el resultado de file es
+                    totalmente heterogéneo? ¿Tiene sentido?
+
+            \end{enumerate}
+
+    \end{enumerate}
+
+    \item   Dentro del directorio home, crear un archivo de texto:
+
+        \begin{enumerate}
+
+            \item Observar las propiedades del archivo utilizando \code{stat}:
+                ¿Cuál es el número de \emph{inodo}? ¿Cuántos enlaces existen a
+                dicho archivo?
+
+            \item Agregue dos nuevos enlaces fuertes/duros para el archivo
+                recién creado. Vuelva a observar las propiedades de cada uno
+                de ellos con \code{stat}.
+
+            \item ¿Cuál es el número de \emph{inodo} para cada uno? ¿Que
+                sucede con los tiempos de acceso? ¿Tamaño?
+
+            \item Modifique el contenido de alguno de los archivos, observe
+                qué sucede con el contenido de los otros enlaces ¿Qué
+                conclusión saca?
+
+            \item Elimine un enlace, verifique el decremento de la cuenta de
+                enlaces con \code{stat} ¿Cuándo se libera efectivamente el
+                espacio utilizado por el archivo?
+
+            \item ¿Existe alguna forma de reconocer cuál fue el primer enlace
+                creado?
+
+        \end{enumerate}
+
+    \item   Sobre los permisos:
+
+        \begin{enumerate}
+
+            \item ¿Cómo se agrupan los permisos de archivos? ¿Cuáles son los
+                posibles permisos?
+
+            \item ¿Quién puede modificar la propiedad, esto es dueño y grupo,
+                de un archivo?
+
+            \item ¿Existe desde la interfaz gráfica un modo en que los
+                usuarios normales puedan observar/modificar los permisos y
+                propiedad de archivos?
+
+            \item ¿Que debería conocer un usuario normal acerca de dichos
+                permisos?
+
+        \end{enumerate}
+
+    \item   ¿Qué sucede con las extensiones de archivos (\code{.pdf},
+        \code{.txt}, etc.) en los sistemas \emph{GNU/Linux}? ¿El sistema hace
+        alguna interpretación de las mismas? ¿El comando file utiliza las
+        extensiones para determinar el tipo de archivos? ¿Es importante la
+        extensión para las aplicaciones? Piense por ejemplo en las
+        aplicaciones gráficas ¿Qué sucede si a un archivo, digamos
+        \code{.pdf}, le borramos la extensión como parte del nombre?
+
+\end{enumerate}
+
+\end{document}
