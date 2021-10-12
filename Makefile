@@ -17,10 +17,10 @@ $(TP_PDF): %.pdf : %.tex apuntes-estilo.sty $(LOGOS_PDF) $(FIGURAS_PDF)
 
 
 $(FIGURAS_PDF): %.pdf : %.svg
-	inkscape $^ -z -A $@
+	inkscape $^ --batch-process --export-area-drawing  -o $@
 
 $(LOGOS_PDF): %.pdf : %.svg
-	inkscape $^ -z -A $@
+	inkscape $^ --batch-process --export-area-drawing  -o $@
 
 clean:
 	rm -f $(GARBAGE)

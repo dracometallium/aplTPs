@@ -8,26 +8,29 @@
 \usepackage{apuntes-estilo}
 \usepackage{fancyhdr,lastpage}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xurl}
 
 \def\maketitle{
 
     \makeatletter
     {\color{bl} \centering \huge \sc \textbf{
     Trabajo práctico N° 4\\
-    \large \vspace*{-8pt} \color{black} Aplicaciones Multimedia
+    \large \vspace*{-8pt} \color{black} Aspectos legales de las producciones
+    Multimedia
     \vspace*{8pt} }\par}
     \makeatother
 
     \makeatletter
     \input{tex/banner.tex}
-
 }
 
 % Custom headers and footers
 \fancyhf{} % clear all header and footer fields
 \fancypagestyle{plain}{\fancyhf{}}
 \pagestyle{fancy}
-\lhead{\footnotesize TP N° 4 - Aplicaciones Libres}
+\lhead{\footnotesize TP N° 4 - Aspectos legales de las producciones
+Multimedia}
 \rhead{\footnotesize \thepage\ }	% "Page 1 of 2"
 
 \def\ti#1#2{\texttt{#1} & #2 \\ }
@@ -40,172 +43,89 @@
 
 \section*{Introducción}
 
+Las composiciones multimedia, traen aparejado la necesidad de evaluar ciertos
+aspectos legales que pueden afectar a la organización que la produce (o
+individuo). Por ejemplo, una presentación como las que podemos realizar con
+\emph{LibreOffice Impress}, podría traer aparejado un conflicto legal para la
+organización si su contenido digital no esta correctamente verificado.
 
-El mundo de las aplicaciones multimedia es inmenso. Como administradores de
-sistemas encontraremos cientos de requisitos diferentes sobre imagen, audio,
-video y autoría multimedia.
+En grandes organizaciones, existen departamentos especializados en lo
+referente a aspectos legales, que establecen las políticas a seguir cuando los
+empleados pretenden crear contenidos multimedia en nombre de la misma. De ese
+modo, los usuarios deberán respetar tal o cual licencia sobre su producción,
+podrán o no utilizar el logo de la empresa, etc. Un empleado podría
+preguntarse por ejemplo, si puede utilizar un video en su presentación, que
+acaba de descargar de la web.
 
-Este trabajo tendrá varios objetivos con respecto a multimedia:
+En organizaciones más pequeñas, muchas veces este departamento especializado
+no existe, y las producciones multimedia de los usuarios se crean sin ningún
+tipo de asesoramiento legal. En estos casos, muchas veces recae en el
+administrador o gerente de sistemas, alertar a los usuarios sobre las
+conductas que pueden generar un conflicto legal a la hora de crear
+producciones multimedia. Porque después de todo, fueron los administradores
+los que instalaron el software que terminó dando origen a la producción
+(aunque lamentable, muchas veces esta es la asociación que padecen los
+administradores).
 
-\begin{itemize}
+Por un lado está la legalidad del software utilizado para la composición
+multimedia. Este aspecto legal ha sido cubierto en otras materias, y atañe
+tanto a administradores como a usuarios. En líneas generales, debemos respetar
+cada licencia de cada software utilizado para la composición multimedia (desde
+los editores, reproductores, software de autoría etc).
 
-\item Conocer terminología básica respecto a cada componente multimedia.
+Pero más complejo aún es lo referente a los derechos de autor sobre la
+composición multimedia en sí misma, y cada elemento individual que la compone:
+texto, imagen, video, etc.
 
-    \item Conocer la problemática básica de las aplicaciones. Cómo se agrupan,
-    cuáles son las funcionalidades principales.
+\section*{Descripción}
 
-    \item Visualizar los recursos necesarios a nivel de hardware y software.
+La intención de esta monografía es abrir el debate para alertarnos acerca de
+la complejidad de este problema y vislumbrar ideas acerca de cómo prevenir
+conflictos legales derivados de las producciones multimedia. Como punto de
+partida, se recomienda analizar el documental producido por \emph{\textbf{TVE}
+(Televisión Española)}, llamado \emph{Copiad Malditos}:
+\url{http://copiadmalditos.blogspot.com.ar/p/videos-el-documental.html}
 
-    \item Vincular aplicaciones con los formatos de archivos manipulados.
-
-    \item Vincular aplicaciones de software libre con aplicaciones utilizadas
-    como estándar de facto, posiblemente privativas.
-
-\end{itemize}
-
-\section{Descripción}
-
-Es habitual que comunidades de personas con fines comunes aúnen esfuerzo para
-resolver ciertos tipo de problemas, el mundo del software, y en particular el
-mundo de los sistemas operativos GNU/Linux no es ajeno a este fenómeno. En
-este caso, y con los objetivos mencionados anteriormente, analizaremos el
-trabajo de comunidades de usuarios y desarrolladores de aplicaciones
-multimedia, que han dado como resultado nuevas distribuciones GNU/Linux.
-
-Nuestro objetivo no será promover el uso de las distribuciones en si, sino el
-análisis de las mismas como medio de obtener conocimiento acerca de
-aplicaciones multimedia instaladas en ellas y la organización de las mismas
-(forma en que están agrupadas y presentadas a los usuarios). El administrador
-podrá considerar en el futuro este tipo de soluciones cuando se adapte a los
-requisitos de los usuarios.
-
-A cada grupo se le asignara una distribución sobre la que deberán realizar un
-informe cubriendo todos los puntos que se plantean más adelante. Se debe
-respetar el mismo formato que en los trabajos anteriores. Soló uno de los
-integrantes debe subir el informe completo, el resto debe subir únicamente la
-caratula.
-
-Las distribuciones a considerar serán:
+El trabajo deberá responder las siguientes preguntas:
 
 \begin{itemize}
 
-    \item Ubuntu Studio: http://ubuntustudio.org/
+    \item ¿Qué es el derecho de autor?
+      
+    \item ¿Qué es el copyright?
+      
+    \item ¿Qué es el \emph{copyleft}?
+      
+    \item ¿Cuál es el organismo nacional equivalente a SGAE de España?
+      
+    \item ¿Qué es \emph{creative commons}?
+      
+    \item ¿Qué tipos de licencias \emph{creative commons} existen?
 
-    \item DreamStudio: (formerly Dream Studio) http://dreamstudio.com/
-
-    \item OpenArtist: http://openartisthq.org/
-
-    \item Musix GNU+Linux: https://musixdistro.wordpress.com/
-
-    \item AV Linux: http://www.bandshed.net/avlinux/
-
-\end{itemize}
-
-\subsubsection{Características básicas de la distribución}
-
-La siguiente información deberá ser recolectada para la distribución asignada:
-
-\begin{enumerate}
-
-    \item País de origen.
-
-    \item Logo que la representa.
-
-    \item ¿Deriva de alguna otra distribución?
-
-    \item ¿Se encuentra activo su desarrollo? ¿De cuándo es la fecha de su
-    última versión estable?
-
-    \item ¿Qué entorno gráfico utiliza?
-
-    \item ¿Cuál es su página web oficial?
-
-    \item ¿Para qué arquitectura de hardware se encuentra disponible?
-
-    \item ¿Proveen software privativo como parte de la instalación?
-
-    \item ¿Cómo están organizadas las aplicaciones? ¿Es sencillo encontrar
-    aplicaciones multimedia para cada fin? Por ejemplo, si queremos un editor
-    de sonido.
-
-\end{enumerate}
-
-\subsubsection*{Aplicaciones multimedia}
-
-Recorra la distribución y elija aplicaciones multimedia que satisfagan las
-siguientes características:
-
-\begin{itemize}
-
-    \item 4 aplicaciones relacionadas a imágenes estáticas bidimensionales.
-
-    \item 4 aplicaciones relacionadas a sonido
-
-    \item 4 aplicaciones relacionadas a video y animación.
-
-    \item 2 aplicaciones relacionadas a autoría multimedia.
+    \item ¿Qué implica cada tipo de licencia \emph{creative commons}?
+      
+    \item ¿Hay otras licencias de tipo \emph{copyleft} para producciones
+        multimedia?
+      
+    \item ¿Qué cree que sucede con los derechos de auto dentro de las grandes
+        corporaciones y empresas privadas?
+      
+    \item En el caso de la producción multimedia del documental de TVE,
+        ¿Importa sólo el derecho de autor de quien hace la composición en su
+        conjunto o se ven involucrados los derechos de los productores de cada
+        elemento individual?
+      
+    \item Piense en sus propias producciones multimedia, por ejemplo todos los
+        documentos creados para esta materia y subidos a la PedCO. ¿Tiene Ud.
+        derecho sobre cada imagen, texto, video, etc; utilizado en su
+        producción? ¿Pensó que podría producir un conflicto a la Universidad
+        por utilizar elementos sobre los cuales no tiene derechos? Observe que
+        la PedCO esta disponible al público en general a través de Internet,
+        bajo un dominio controlado por la Universidad.
 
 \end{itemize}
 
-Las aplicaciones elegidas no deben ser obsoletas, es decir deben tener una
-comunidad activa y desarrollo no superior a tres años, es decir la última
-versión disponible por el desarrollador no debe superar los tres años.
-
-Para cada aplicación deberá:
-
-\begin{enumerate}
-
-    \item Describir brevemente su funcionalidad.
-
-    \item Características técnicas: Requisitos generales de sistema:
-    almacenamiento masivo, RAM, CPU, hardware específico, etc. Versión.
-    Licencia. Sitio del desarrollo (\emph{homepage/mainstream}).
-
-    \item Formatos de datos manipulados:
-
-    \begin{itemize}
-
-        \item Indique qué formatos manipula la aplicación.
-
-        \item Indique si los formatos son nativos de la aplicación.
-
-        \item De ser posible indique si los formatos aplican compresión o no.
-
-        \item En el caso de formatos de imágenes 2D estáticas, indique si son
-            vectoriales o matriciales (mapa de bits).
-
-
-    \end{itemize}
-
-    \item Dar dos ejemplos de uso de la aplicación. ¿Para qué podría servir?
-
-    \item ¿Existe alguna aplicación que sea un estándar de facto y cubra esta
-    funcionalidad? Por ejemplo el estándar de facto para dibujo CAD suele ser
-    \emph{Autocad (R) de Autodesk}, si bien existe \emph{FreeCad}, \emph{Qcad}
-    y otros que tienen funcionalidades similares.
-
-    \item En el caso de aplicaciones de autoría: ¿Permiten agregar
-    interactividad a la composición? ¿Son lineales o no lineales? ¿Cómo podría
-    un usuario hacer uso de la composición resultante?
-
-\end{enumerate}
-
-\subsection*{Preguntas generales}
-
-\begin{itemize}
-
-    \item ¿Cuál es el modelo de la placa de video? ¿Cómo obtiene esta
-    información?
-
-    \item ¿Cuál es el modelo de la placa de sonido? ¿Cómo obtiene esta
-    información?
-
-    \item ¿Cuál es el driver utilizado para la tarjeta de video?
-
-    \item ¿Cuál es el driver utilizado para la tarjeta de sonido?
-
-\end{itemize}
-
+%%%%%%%%%%%
 La organización del trabajo recomendada es la siguiente:
 
 \scalebox{0.39}{
